@@ -67,5 +67,118 @@
     "cookTime": "15 min",
     "servings": 2,
     "tags": ["Salad", "Lunch", "Chicken", "Classic"]
+  },
+  {
+    "id": "rec4",
+    "name": "Creamy Tomato Pasta",
+    "image": "https://placehold.co/400x300/primary-300/text-dark?text=Tomato+Pasta",
+    "description": "A simple yet delicious pasta dish with a rich, creamy tomato sauce.",
+    "ingredients": [
+      "300g pasta (penne or fusilli)", "1 tbsp olive oil", "1 onion, finely chopped", "2 cloves garlic, minced",
+      "400g canned crushed tomatoes", "120ml heavy cream", "50g grated Parmesan cheese", "Fresh basil leaves",
+      "Salt", "Pepper"
+    ],
+    "instructions": [
+      "Cook pasta according to package directions until al dente. Drain and set aside.",
+      "While pasta cooks, heat olive oil in a large skillet over medium heat. Add onion and cook until softened, about 5 minutes.",
+      "Add garlic and cook for 1 minute until fragrant.",
+      "Stir in crushed tomatoes, salt, and pepper. Bring to a simmer and cook for 10-15 minutes, allowing sauce to thicken.",
+      "Reduce heat to low, stir in heavy cream and Parmesan cheese until well combined and heated through.",
+      "Add cooked pasta to the sauce and toss to coat. Stir in fresh basil.",
+      "Serve immediately, garnished with extra Parmesan if desired."
+    ],
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 3,
+    "tags": ["Italian", "Vegetarian", "Dinner", "Quick"]
+  },
+  {
+    "id": "rec5",
+    "name": "Lemon Herb Roasted Chicken",
+    "image": "https://placehold.co/400x300/secondary-300/text-dark?text=Roasted+Chicken",
+    "description": "Tender and juicy roasted chicken infused with lemon and aromatic herbs.",
+    "ingredients": [
+      "1 whole chicken (1.5-2 kg)", "2 lemons, quartered", "4 sprigs fresh rosemary", "4 sprigs fresh thyme",
+      "4 cloves garlic, smashed", "2 tbsp olive oil", "Salt", "Black pepper", "1 onion, quartered (optional)"
+    ],
+    "instructions": [
+      "Preheat oven to 200°C (400°F).",
+      "Pat chicken dry with paper towels. Season generously inside and out with salt and pepper.",
+      "Stuff the chicken cavity with lemon quarters, rosemary, thyme, and smashed garlic.",
+      "Place chicken in a roasting pan. Drizzle with olive oil and rub evenly over the skin.",
+      "Arrange onion quarters around the chicken in the pan (if using).",
+      "Roast for 1 hour to 1 hour 20 minutes, or until internal temperature reaches 74°C (165°F) and juices run clear.",
+      "Let rest for 10-15 minutes before carving and serving."
+    ],
+    "prepTime": "15 min",
+    "cookTime": "75 min",
+    "servings": 4,
+    "tags": ["Dinner", "Chicken", "Comfort Food", "Healthy"]
+  },
+  {
+    "id": "rec6",
+    "name": "Quick Black Bean Burgers",
+    "image": "https://placehold.co/400x300/accent-300/text-dark?text=Bean+Burger",
+    "description": "Flavorful vegetarian burgers made with black beans, perfect for a quick meal.",
+    "ingredients": [
+      "1 can (400g) black beans, rinsed and drained", "1/2 cup breadcrumbs", "1/4 cup finely chopped onion",
+      "1 clove garlic, minced", "1 tsp cumin", "1/2 tsp chili powder", "Salt", "Pepper", "2 tbsp olive oil",
+      "Burger buns", "Toppings (lettuce, tomato, avocado)"
+    ],
+    "instructions": [
+      "In a large bowl, mash black beans with a fork until mostly smooth but still chunky.",
+      "Stir in breadcrumbs, onion, garlic, cumin, chili powder, salt, and pepper until well combined.",
+      "Form the mixture into 2-3 patties.",
+      "Heat olive oil in a non-stick skillet over medium heat.",
+      "Cook patties for 4-5 minutes per side, or until golden brown and heated through.",
+      "Serve hot on burger buns with your favorite toppings."
+    ],
+    "prepTime": "15 min",
+    "cookTime": "10 min",
+    "servings": 2,
+    "tags": ["Vegetarian", "Lunch", "Dinner", "Quick", "Burger"]
+  },
+  {
+    "id": "rec7",
+    "name": "Simple Overnight Oats",
+    "image": "https://placehold.co/400x300/primary-100/text-dark?text=Overnight+Oats",
+    "description": "An easy, healthy, and customizable breakfast that prepares itself overnight.",
+    "ingredients": [
+      "1/2 cup rolled oats", "1 cup milk (dairy or non-dairy)", "1 tbsp chia seeds", "1 tbsp maple syrup or honey",
+      "1/2 tsp vanilla extract", "Toppings: fresh berries, nuts, shredded coconut"
+    ],
+    "instructions": [
+      "In a jar or container, combine oats, milk, chia seeds, maple syrup/honey, and vanilla extract.",
+      "Stir well to combine, ensuring no clumps of oats or chia seeds remain.",
+      "Cover the jar and refrigerate overnight (or for at least 4 hours).",
+      "In the morning, stir well. If too thick, add a splash more milk.",
+      "Top with your favorite fruits, nuts, or other additions and serve cold."
+    ],
+    "prepTime": "5 min",
+    "cookTime": "0 min",
+    "servings": 1,
+    "tags": ["Breakfast", "Healthy", "Quick", "Vegetarian"]
+  },
+  {
+    "id": "rec8",
+    "name": "Sheet Pan Lemon Herb Salmon & Asparagus",
+    "image": "https://placehold.co/400x300/secondary-100/text-dark?text=Salmon+Asparagus",
+    "description": "A flavorful and easy one-pan meal, perfect for a healthy weeknight dinner.",
+    "ingredients": [
+      "2 salmon fillets", "1 bunch asparagus, trimmed", "1 lemon, sliced", "2 tbsp olive oil",
+      "1 tsp dried dill", "Salt", "Black pepper"
+    ],
+    "instructions": [
+      "Preheat oven to 200°C (400°F). Line a baking sheet with parchment paper.",
+      "Place salmon fillets on one side of the baking sheet. Arrange asparagus on the other side.",
+      "Drizzle everything with olive oil. Season salmon and asparagus generously with salt, pepper, and dried dill.",
+      "Place lemon slices over the salmon and asparagus.",
+      "Roast for 12-18 minutes, or until salmon is cooked through and flakes easily with a fork, and asparagus is tender-crisp.",
+      "Serve immediately."
+    ],
+    "prepTime": "10 min",
+    "cookTime": "15 min",
+    "servings": 2,
+    "tags": ["Dinner", "Healthy", "Quick", "Fish"]
   }
 ]

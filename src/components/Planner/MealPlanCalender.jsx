@@ -1,13 +1,12 @@
-import React, { useState, useEffect, useMemo } from 'react'; // Added useMemo
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import { useDrag } from 'react-dnd'; // <--- ADDED THIS IMPORT
+import { useDrag } from 'react-dnd';
 import { useData } from '../../hooks/useData';
-import MealSlot, { ItemTypes } from './MealSlot';
-// import RecipeCard from '../Recipes/RecipeCard'; // Not directly used here, but DraggableRecipeCard is
+import MealSlot from './MealSlot'; // No need to import ItemTypes here from MealSlot anymore
+import { ItemTypes } from '../../utils/dndItemTypes'; // <--- NEW IMPORT PATH
 import Button from '../UI/Button';
-import { FaPlus, FaTimes } from 'react-icons/fa'; // FaPlus and FaTimes not used, can be removed if not needed elsewhere
 import LoadingSpinner from '../Common/LoadingSpinner';
 import Input from '../UI/Input';
 
@@ -19,7 +18,6 @@ const MealPlanCalendar = ({ onSelectRecipeDetail }) => {
   const [availableRecipes, setAvailableRecipes] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Initialize available recipes (e.g., all recipes)
   useEffect(() => {
     setAvailableRecipes(recipes);
   }, [recipes]);
@@ -41,13 +39,13 @@ const MealPlanCalendar = ({ onSelectRecipeDetail }) => {
     if (newMealPlan[day] && newMealPlan[day][mealType]) {
       delete newMealPlan[day][mealType];
       if (Object.keys(newMealPlan[day]).length === 0) {
-        delete newMealPlan[day]; // Remove day if no meals left
+        delete newMealPlan[day];
       }
       updateMealPlan(newMealPlan);
     }
   };
 
-  const filteredAvailableRecipes = useMemo(() => { // Changed to useMemo for consistency
+  const filteredAvailableRecipes = useMemo(() => {
     if (!searchTerm) return availableRecipes;
     const lowerCaseSearchTerm = searchTerm.toLowerCase();
     return availableRecipes.filter(recipe =>
@@ -69,7 +67,7 @@ const MealPlanCalendar = ({ onSelectRecipeDetail }) => {
           <h3 className="text-3xl font-bold text-text-dark mb-6 text-center">Your Weekly Meal Plan</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
             <div className="col-span-1 sm:col-span-2 md:col-span-3 grid grid-cols-3 gap-4 font-bold text-text-dark text-center">
-              <div></div> {/* Empty corner for alignment */}
+              <div></div>
               {mealTypes.map(type => (
                 <div key={type} className="text-lg">{type}</div>
               ))}
@@ -128,7 +126,7 @@ const MealPlanCalendar = ({ onSelectRecipeDetail }) => {
 const DraggableRecipeCard = ({ recipe }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: ItemTypes.RECIPE,
-    item: { id: recipe.id },
+    item: { id: recipe.id, name: recipe.name },
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
     }),

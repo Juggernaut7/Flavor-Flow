@@ -3,12 +3,7 @@ import { motion } from 'framer-motion';
 import { useDrag, useDrop } from 'react-dnd';
 import { FaTimesCircle } from 'react-icons/fa';
 import Button from '../UI/Button';
-
-// Define item types for react-dnd
-export const ItemTypes = {
-  RECIPE: 'recipe',
-  MEAL_SLOT_RECIPE: 'meal_slot_recipe', // For dragging a recipe *out* of a slot
-};
+import { ItemTypes } from '../../utils/dndItemTypes'; // <--- NEW IMPORT PATH
 
 const MealSlot = ({ day, mealType, recipe, onDropRecipe, onRemoveRecipe, onSelectRecipeDetail }) => {
   // For dropping a recipe *into* this slot
@@ -29,11 +24,8 @@ const MealSlot = ({ day, mealType, recipe, onDropRecipe, onRemoveRecipe, onSelec
       isDragging: monitor.isDragging(),
     }),
     end: (item, monitor) => {
-      // If the item was dropped outside a valid drop target, put it back (or handle as needed)
       if (!monitor.didDrop()) {
-        // This is tricky without a global state for "dragged out but not dropped"
-        // For simplicity, we'll assume it's removed if not dropped elsewhere.
-        // A more complex solution would involve a temporary state in MealPlanCalendar
+        // Handle logic if recipe is dragged out but not dropped in another valid slot
       }
     },
   }), [recipe, day, mealType]);
