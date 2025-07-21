@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles for the entire application */
+body {
+  /* Apply the Inter font globally */
+  font-family: 'Inter', sans-serif;
+  /* Use our custom background and text colors */
+  @apply bg-background-light text-text-dark;
+  /* Ensure smooth scrolling for anchor links */
+  scroll-behavior: smooth;
+  /* Prevent horizontal scrolling on smaller screens */
+  overflow-x: hidden;
+}
+
+/* Basic reset for elements that might have default margins */
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes extra space below images */
+}
+
+/* Optional: Style for focus states for accessibility */
+*:focus {
+  outline: 2px solid theme('colors.primary.DEFAULT');
+  outline-offset: 2px;
+}
